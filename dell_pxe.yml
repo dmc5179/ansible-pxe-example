@@ -4,8 +4,8 @@
   name: Configure Boot Mode Setting
   gather_facts: False
 
-  collections:
-    - dellemc.openmanage
+#  collections:
+#    - dellemc.openmanage
 
   tasks:
 
