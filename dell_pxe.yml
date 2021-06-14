@@ -9,30 +9,30 @@
 
   tasks:
 
-  - name: Configure Bios Generic Attributes
-    dellemc.openmanage.idrac_bios:
-       idrac_ip: "{{ idrac_ip }}"
-       idrac_user: "{{ idrac_user }}"
-       idrac_password: "{{ idrac_password }}"
-       attributes:
-         BootMode: "Bios"
-         OneTimeBootMode: "Enabled"
-         BootSeqRetry: "Enabled"
-    tags: 
-        - bootconfig
+    - name: Configure Bios Generic Attributes
+      dellemc.openmanage.idrac_bios:
+         idrac_ip: "{{ idrac_ip }}"
+         idrac_user: "{{ idrac_user }}"
+         idrac_password: "{{ idrac_password }}"
+         attributes:
+           BootMode: "Bios"
+           OneTimeBootMode: "Enabled"
+           BootSeqRetry: "Enabled"
+      tags: 
+          - bootconfig
  
-  - name: Configure PXE Generic Attributes
-    dellemc.openmanage.idrac_bios:
-       idrac_ip: "{{ idrac_ip }}"
-       idrac_user: "{{ idrac_user }}"
-       idrac_password:  "{{ idrac_password }}"
-       attributes:
-         PxeDev1EnDis: "Enabled"
-         PxeDev1Protocol: "IPV4"
-         #PxeDev1VlanEnDis: "Enabled"
-         #PxeDev1VlanId: x
-         #PxeDev1Interface: "NIC.Embedded.x-x-x"
-         #PxeDev1VlanPriority: x
-    tags: 
-        - pxeconfig
+    - name: Configure PXE Generic Attributes
+      dellemc.openmanage.idrac_bios:
+         idrac_ip: "{{ idrac_ip }}"
+         idrac_user: "{{ idrac_user }}"
+         idrac_password:  "{{ idrac_password }}"
+         attributes:
+           PxeDev1EnDis: "Enabled"
+           PxeDev1Protocol: "IPV4"
+           #PxeDev1VlanEnDis: "Enabled"
+           #PxeDev1VlanId: x
+           #PxeDev1Interface: "NIC.Embedded.x-x-x"
+           #PxeDev1VlanPriority: x
+      tags: 
+          - pxeconfig
  
