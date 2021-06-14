@@ -10,7 +10,7 @@
   tasks:
 
   - name: Configure Bios Generic Attributes
-    idrac_bios:
+    dellemc.openmanage.idrac_bios:
        idrac_ip: "{{ idrac_ip }}"
        idrac_user: "{{ idrac_user }}"
        idrac_password: "{{ idrac_password }}"
@@ -22,7 +22,7 @@
         - bootconfig
  
   - name: Configure PXE Generic Attributes
-    idrac_bios:
+    dellemc.openmanage.idrac_bios:
        idrac_ip: "{{ idrac_ip }}"
        idrac_user: "{{ idrac_user }}"
        idrac_password:  "{{ idrac_password }}"
